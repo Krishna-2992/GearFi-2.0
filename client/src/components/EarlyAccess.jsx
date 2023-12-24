@@ -4,12 +4,16 @@ import thumbsUpNFT from '../assets/thumbsUpNft.png'
 import axios from 'axios'
 
 export default function EarlyAccess() {
+  const SERVER_URL = import.meta.env.VITE_SERVER_URL
+
   const [email, setEmail] = useState('')
   const [sentEmail, setSentEmail] = useState(false)
 
   const sendEmail = () => {
     console.log(email)
-    axios.post(`http://localhost:8000/subscriber/`, { email })
+    axios.post(`${SERVER_URL}/subscriber/`, {
+      "subscriber": email
+  })
     setSentEmail(true)
   }
 

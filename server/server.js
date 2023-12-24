@@ -5,6 +5,7 @@ const cors = require('cors')
 require('dotenv').config()
 
 const assetRoutes = require('./routes/assetRoutes')
+const subscriberRoutes = require('./routes/subscriberRoutes')
 
 const app = express()
 const port = process.env.PORT
@@ -23,6 +24,7 @@ mongoose
   });
 
 app.use('/', assetRoutes)
+app.use('/', subscriberRoutes)
 
 app.listen(port, () => {
   console.log(`App running on port ${port}...`)

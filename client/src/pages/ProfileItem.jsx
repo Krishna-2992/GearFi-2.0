@@ -98,7 +98,7 @@ const ProfileItem = () => {
                                 <div className='flex flex-col items-center'>
                                     <div>Remaining Amount</div>
                                     <div className='text-5xl font-bold'>
-                                        30%
+                                        {dueAmount}
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@ const ProfileItem = () => {
                                 return (
                                     <button
                                         className='primary-btn'
-                                        onClick={() => cancelListing(nftData)}
+                                        onClick={() => cancelListing(nftData, 'LISTED_CANCELLED')}
                                     >
                                         Cancel Listing
                                     </button>
@@ -120,7 +120,7 @@ const ProfileItem = () => {
                                     <div>
                                         <button
                                             className='primary-btn'
-                                            onClick={() => cancelListing(nftData)}
+                                            onClick={() => cancelListing(nftData, 'BNPL_LOAN_ACTIVE')}
                                         >
                                             Cancel Listing
                                         </button>

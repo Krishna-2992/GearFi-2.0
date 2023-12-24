@@ -185,7 +185,7 @@ const UserContextProvider = ({ children }) => {
         })
     }
 
-    async function cancelListing(nftData) {
+    async function cancelListing(nftData, state) {
         const tokenAddress = nftData.nftAddress
         const tokenId = nftData.tokenId
 
@@ -206,7 +206,7 @@ const UserContextProvider = ({ children }) => {
         if (nftData.state === 'LISTED') {
             await contract.cancelListing(tokenAddress, tokenId).then(() => {
                 axios.patch(`${SERVER_URL}/state`, {
-                    state: 'LISTED_CANCELLED',
+                    state: state,
                     price: 0,
                     owner: owner,
                     tokenId: tokenId,

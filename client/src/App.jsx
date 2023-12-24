@@ -11,6 +11,7 @@ import Profile from './pages/Profile'
 import Collection from './pages/Collection'
 import Item from './pages/Item'
 import ProfileItem from './pages/ProfileItem'
+import Staking from './components/Staking'
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                         path='/account/:tokenAddress/:tokenId'
                         element={<ProfileItem />}
                     />
+                    <Route path = '/staking' element={<Staking/>} />
                 </Routes>
             </div>
         </UserContextProvider>
