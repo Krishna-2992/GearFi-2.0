@@ -7,7 +7,7 @@ async function main() {
     const contractAddress4 = '0x920470bF8142a4bB4E960B5f17d79a6A1b7549dD'
     const contractAddress5 = '0xe0939Fb9D1cA59a54B0C809920bb7436Ce69bBE4'
 
-    const bnplAddress = '0x37da7F65d3BAb7f329Dc87A8bA6F17D7a8536464'
+    const bnplAddress = '0x1161bA51CDf4DDe9FCa75e9A0492A1a5B173C340'
     const bnplAbi = [
         'function listItem(address nftAddress, uint256 tokenId, uint256 _price)',
         'function bnplInitiate(address nftAddress, uint256 tokenId)',
@@ -21,12 +21,8 @@ async function main() {
 
     const price = hre.ethers.parseEther('0.5')
 
-    await contract.deposit({
-        value: price,
-    })
-    console.log('✅ 0.5 Mumbai deposited successfully!')
-
-
+    await contract.withdraw("500000000000000000")
+    console.log('✅ 0.5 Mumbai withdrew successfully!')
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -302,7 +302,7 @@ contract BNPL is ReentrancyGuard, IERC721Receiver {
         payable
         nonReentrant
     {
-        LoanData memory loanData = s_loan[nftAddress][tokenId];
+        LoanData storage loanData = s_loan[nftAddress][tokenId];
         require(
             msg.sender == loanData.buyer,
             "You are not the buyer of this item."

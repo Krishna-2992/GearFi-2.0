@@ -1,3 +1,5 @@
+export const BNPL_ADDRESS = "0x37da7F65d3BAb7f329Dc87A8bA6F17D7a8536464"
+
 export const BNPL_ABI = [
 	{
 		"inputs": [],
@@ -593,5 +595,3 @@ export const BNPL_ABI = [
 		"type": "function"
 	}
 ]
-
-export const BNPL_ADDRESS = "0x1161bA51CDf4DDe9FCa75e9A0492A1a5B173C340"

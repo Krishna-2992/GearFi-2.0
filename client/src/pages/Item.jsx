@@ -138,11 +138,12 @@ const Item = () => {
             </div>
           )}
 
-          {currState === "BNPL_LOAN_ACTIVE" && (
+          {currState === "BNPL_LOAN_ACTIVE" && address && (
             <Link
-              to={`/user/${address}`}
-              state={{ data: address }}
+            to={`/user/${address}`}
+            state={{ data: address }}
             >
+              {console.log('addres is', address)}
               <button className="primary-btn">Checkout Sale</button>
             </Link>
           )}

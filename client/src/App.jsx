@@ -10,6 +10,7 @@ import Home from './pages/Home'
 import Profile from './pages/Profile'
 import Collection from './pages/Collection'
 import Item from './pages/Item'
+import ProfileItem from './pages/ProfileItem'
 
 function App() {
     return (
@@ -17,7 +18,7 @@ function App() {
             <div className='gradient-bg-welcome'>
                 <Navbar />
                 <Routes>
-                    <Route path='/' element={<Home />} /> 
+                    <Route path='/' element={<Home />} />
                     <Route path='/user/:userAddress' element={<Profile />} />
                     <Route
                         path='collection/:collAddress'
@@ -26,6 +27,10 @@ function App() {
                     <Route
                         path='/collection/:tokenAddress/:tokenId'
                         element={<Item />}
+                    />
+                    <Route
+                        path='/account/:tokenAddress/:tokenId'
+                        element={<ProfileItem />}
                     />
                 </Routes>
             </div>

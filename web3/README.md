@@ -13,12 +13,13 @@ phase 1
   - here we want to make a platform in which a user can come
 
 ## addresses: 
+BNPL address: 0x37da7F65d3BAb7f329Dc87A8bA6F17D7a8536464
+
 BAYC: 0x63c44637395F93D59Ed4298370183492d89694cF
 MAYC: 0x9DBFa7c14cfb32b91c61a0B5B23c1CC1796fFBD2
 Azuki: 0x5541FF6B03cc2eBF443BeD3Bf3bebF9016A6225F
 otherdeed: 0x920470bF8142a4bB4E960B5f17d79a6A1b7549dD
 milady: 0xe0939Fb9D1cA59a54B0C809920bb7436Ce69bBE4
-
 
 
 ## base uri: 

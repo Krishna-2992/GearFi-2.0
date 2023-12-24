@@ -31,7 +31,7 @@ const Profile = () => {
 
   console.log("datacollection ", nftData);
   return (
-    <div className="text-white mt-20 h-full" id="main">
+    <div className="text-white mt-20 min-h-screen h-full" id="main">
       <div className="flex flex-col items-center">
         <img src={userProfile} alt="" className="w-24 mt-8 rounded-full" />
         <div className=" text-4xl font-bold mb-2">
@@ -64,7 +64,7 @@ const Profile = () => {
             if (!(nft.state === "LISTED" || nft.state === "MARGIN_LISTED"))
             return (
               <Link
-                to={`/account/${nft.contractAddress}/${nft.tokenId}`}
+                to={`/account/${nft.nftAddress}/${nft.tokenId}`}
                 state={{ data: nft }}
               >
                 
@@ -103,7 +103,7 @@ const Profile = () => {
               return (
                 
                 <Link
-                  to={`/account/${nft.contractAddress}/${nft.tokenId}`}
+                  to={`/account/${nft.nftAddress}/${nft.tokenId}`}
                   state={{ data: nft }}
                 >
                    
